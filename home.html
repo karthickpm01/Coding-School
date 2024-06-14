@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding is Easy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        
+        .container {
+            margin: 0%;
+            padding: 0%;
+            /* background-color: rgb(210, 23, 23); */
+        }
+        nav .col-1 {
+            padding-left: 8px;
+            border-radius: 30%;
+            font-size: 20px;
+            letter-spacing: 2px;
+            opacity: 0.9;
+            height: 50px;
+        }
+        .col-1
+        {
+            margin-top: 20px;
+        }
+        nav .col-1 span {
+            margin-left: 65px;
+        }
+        nav .col-1 b {
+            color: red;
+        }
+        nav {
+            margin-bottom: 30px;
+        }
+        nav ul li a:hover {
+            color: red;
+        }
+
+        .home-content {
+            padding-left: 40px;
+            padding-top: 40px;
+            padding-right: 40px;
+            display: flex;
+        }
+
+        .home-img h2 {
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+
+        .home h2 {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 30px;
+            /* box-shadow: 0 0 20px black; */
+            padding: 10px;
+        }
+
+        .home-info {
+            padding: 20px;
+            line-height: 30px;
+            margin-top: -20px;
+            font-size: 23px;
+        }
+
+        .home-info p {
+            line-height: 40px;
+            margin-left: 25px;
+            margin-top: 30px;
+        }
+
+        .about {
+            padding: 20px;
+        }
+
+        .about-info h3 {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            /* box-shadow: 0 0 20px black; */
+            padding: 10px;
+            font-size: 30px;
+        }
+        .about-info
+        {
+            padding: 20px;
+        }
+        .benefits h3 {
+            font-size: 30px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            /* box-shadow: 0 0 20px black; */
+            padding: 20px;
+        }
+
+        .benefits-info {
+            width: 1000px;
+            height: 300px;
+            background-color: rgb(230, 229, 229);
+            padding: 50px;
+            line-height: 30px;
+            font-size: 25px;
+        }
+
+        .about-info p {
+            line-height: 50px;
+            font-size: 23px;
+        }
+
+        /* .careers h3
+        {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        } */
+        .careers p {
+            line-height: 15px;
+        }
+
+        .careers h2 {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            /* box-shadow: 0 0 20px black; */
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        .careers-info {
+            display: grid;
+            grid-template-columns: repeat(3, 400px);
+        }
+
+        .col-info {
+            background-color: rgb(230, 229, 229);
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            font-size: 18px;
+            transition: all 0.3s;
+            cursor: pointer;
+            box-shadow: 0 0 10px black;
+            margin-top: 20px;
+            margin-left: 20px;
+
+        }
+
+        .col-info p {
+            line-height: 25px;
+        }
+
+        .col-info:hover {
+            transform: scale(0.9);
+        }
+
+        .languages h3 {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            /* box-shadow: 0 0 20px black; */
+            padding: 30px;
+            font-size: 30px;
+        }
+
+        .languages .lang {
+            line-height: 30px;
+        }
+
+        .footer {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding: 15px;
+        }
+
+        table {
+            margin-left: 100px;
+            margin-bottom: 50px;
+
+        }
+
+        th {
+            padding: 10px;
+            font-size: 25px;
+        }
+
+        td {
+            padding: 10px;
+            font-size: 19px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            padding: 0%;
+            margin: 0;
+        }
+
+        nav {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            color: white;
+            position: sticky;
+            top: 0;
+            height: 60px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 45px;
+            list-style-type: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+        }
+
+        .menu-bar {
+            font-size: 25px;
+            display: none;
+            cursor: pointer;
+        }
+
+        @media (max-width:600px) 
+        {
+            nav ul {
+                position: absolute;
+                flex-direction: column;
+                align-items: center;
+                top: 100px;
+                left: 0;
+                right: 0;
+                background-color: black;
+                display: flex;
+                overflow: hidden;
+                gap: 0;
+                transition: all 0.7s;
+            }
+
+            nav ul li {
+                padding: 10px;
+            }
+
+            .menu-bar {
+                display: block;
+            }
+            .home h2{
+                font-size: 24px;
+                padding: 5px;
+                border: 0;
+                box-shadow: none;
+            }
+            .home-content
+            {
+                display: flex;
+                flex-wrap: wrap;
+               padding: 0;
+            }
+            .home-content img{
+                width: 200px;
+                height: 150px;
+                margin-left: 50px;
+            }
+           .home-info p
+            {
+                font-size:18px;
+                line-height: 25px;
+                margin-top: 20px;
+            }
+            .about-info h3
+            {
+                box-shadow: none;
+                font-size: 25px;
+            }
+            .about-info p{
+                font-size: 18px;
+                line-height: 30px;
+            } 
+            .benefits h3
+            {
+                font-size: 25px;
+                box-shadow: none;
+            }
+            .benefits
+            {
+                margin-left: 15 px;
+                
+            }
+            .home-img img{
+                  margin-left: 70px;  
+            }
+            .benefits-info
+            {
+                font-size: 15px;
+                width: 250px;
+                height: 750px;
+                padding: 10px;
+            }
+            .careers h2
+            {
+                font-size: 25px;
+                box-shadow: none;
+            }
+            .col-info
+            {
+               
+                font-size: 15px;
+                padding: 10px;
+                margin: 0;  
+                width: 250px;
+                height: 370px;
+                margin: 0%; 
+                margin-top: 20px;       
+             }
+             .careers-info 
+             {
+                display: flex;
+                flex-wrap: wrap;
+             }
+             .careers-info  h3{
+                padding: 10px;
+             }
+             .careers-info
+             {
+                margin-left: 25px;
+
+             }
+
+             .most h3{
+                font-size: 25px;
+                box-shadow: none;
+             }
+             table
+             {
+                margin: 10px;
+                padding: 10px;
+             }
+             th
+             {
+                font-size: 20px;
+                padding: 0px;
+             }
+             td{
+                font-size: 17px;
+             }
+             .footer
+             {
+                margin-top: 20px;
+             }
+             .footer p{
+                font-size: 18px;
+                padding: 10px;
+             }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <nav>
+                <div class="col-1">
+                    <h5><b>C</b>oding<br><span>School</span></h5>
+                </div>
+                <ul id="menulist1">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="java.html">Java</a></li>
+                    <li> <a href="python.html">Python</a></li>
+                    <li><a href="DSA.html">DSA</a></li>
+                </ul>
+                <div class="menu-bar">
+                    <i class="fas fa-bars" onclick="openmenu()"></i>
+                </div>
+            </nav>
+        </div>
+
+        <!-- <div class="row">
+            <div class="col-1">
+                <h5><b>C</b>oding<br><span>School</span></h5>
+            </div>
+            <div class="col-2">
+                <div class="navbar" id="menulist">
+                    <a href="home.html">Home</a>
+                    
+                   
+                    
+                    
+                </div>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </div>
+        </div> -->
+
+
+
+        <div class="home">
+            <h2>What Is Coding?</h2>
+            <marquee direction="left">
+
+            </marquee>
+            <div class="home-content">
+                <div class="home-img">
+                    <img src="https://blog.hubspot.com/hs-fs/hubfs/how-to-start-coding-1.jpg?width=595&height=400&name=how-to-start-coding-1.jpg"
+                        height="300px" width="350px">
+                </div>
+                <div class="home-info">
+                    <p><b>Coding </b>can be defined as writing instructions for computers and other hardware.</p>
+                    <p>Coding creates a set of instructions for computers to follow. <br>
+                        These instructions determine what
+                        actions a computer can and cannot take. Coding allows programmers to build programs, such as
+                        websites and apps. Computer programmers can also tell computers how to process data in better,
+                        faster ways.</p>
+                </div>
+            </div>
+        </div><br><br><hr>
+
+        <div class="about">
+            <div class="about-info">
+                <h3>How Does Coding Work?</h3><br>
+                <p>1.speak with computers, programmers learn different coding languages.<br><br> 2.Binary code is the primary
+                    language of all computers. Binary code consists of only two numbers: one and zero. In the binary
+                    coding language, zero represents off while one represents on.
+
+                    Binary is still used with electronics and computer hardware.<br> <br>3.Programmers can use binary to control
+                    the flow of electricity and the positive and negative poles of a magnet. Binary code allows
+                    programmers to create simple instructions and procedures for computers.</p><br><br><hr>
+                <h3>Low-Level vs. High-Level</h3>
+                <p>Computer programmers split coding languages into two groups: low-level and high-level.<br><br>
+
+                    <b>1.Low-level languages,</b> like binary, are considered "machine-oriented." Machine-oriented
+                    languages
+                    write instructions that must be specified in terms of the capabilities of the processor in question.
+                    Coders also refer to low-level languages as assembly language or machine code.<br><br>
+
+                    <b>2.High-level languages</b> are user-oriented. Most of the popular coding languages, such as Python,
+                    fall
+                    under this category. Programmers designed high-level languages to convert an algorithm into program
+                    code more easily. High-level coding languages are closer to human language — they include more
+                    nuance and adaptability than low-level coding languages.
+                </p><br><br><hr>
+                <h3>Coding vs. Programming</h3>
+                <p>A lot of people think coding and programming are the same thing. Coding, however, is only one small
+                    part of programming.<br><br>
+
+                    Coding is the process of allowing humans to speak to computers. As computers only understand binary
+                    language — a series of zeros and ones — humans need to use a programming language as a translator of
+                    sorts.
+
+                    Programming, on the other hand, includes not only coding but also the digital product's planning,
+                    testing, deployment, and maintenance.</p>
+            </div><br><br><hr>
+            <div class="benefits">
+                <h3>Benefits of Learning Coding</h3>
+                <div class="benefits-info">
+                    <li>Elevate your career prospects: Regardless of whether you work in the tech industry, learning at
+                        least one programming language can help you stand out from the competition in an interview
+                        process or help you negotiate a higher salary.</li><br>
+                    <li>Improve your problem-solving skills: Many people who learn to code report an improved ability to
+                        break problems down into smaller pieces and approach problems with clearer, linear thinking.
+                    </li><br>
+                    <li>Cultivate creativity: Coding gives you the ability to create anything you can dream of.</li><br>
+                    <li>Community: There are countless online communities for coders to exchange tips and tricks and
+                        chat and meet each other.</li><br>
+                </div>
+            </div>
+            <div class="careers">
+                <h2>Careers Where Coding Is Helpful</h2><br><br><hr>
+                <div class="careers-info">
+                    <div class="col-info">
+                        <h3>Computer Programmer</h3>
+                        <hr>
+                        <p>Computer programmers write and test code for applications, software, and websites. These
+                            professionals typically know multiple coding languages. They may work individually or as
+                            part of
+                            a team. Computer programmers earned a median annual salary of $93,000 in May 2023</p>
+                    </div>
+                    <div class="col-info">
+                        <h3>Software Developer</h3>
+                        <hr>
+                        <p>Software developers create new software and upgrades for existing programs. These
+                            professionals
+                            also oversee software testing and development, sometimes consulting with other tech
+                            professionals to create a streamlined product. Software developers, quality assurance
+                            analysts,
+                            and testers earned a median annual salary of $120,730 in May 2023. The BLS projects 25% job
+                            growth between 2021 and 2031.</p>
+                    </div>
+                    <div class="col-info">
+                        <h3>Web Developer</h3>
+                        <hr>
+                        <p>Web developers work with their clients to create websites and apps. These professionals can
+                            work
+                            on front-end and/or back-end development. Web developers may also consult about the
+                            functionality of existing websites. These professionals earned a median annual salary of
+                            $79,890
+                            in May 2023. The BLS projects 23% job growth between 2021 and 2031.</p>
+                    </div>
+                    <div class="col-info">
+                        <h3>Database Administrator</h3>
+                        <hr>
+                        <p>These professionals create and/or manage computer systems that store data. Administrators
+                            also
+                            ensure that user data remains secure, either from external attacks or internal data loss.
+                            Database administrators and architects earned a median annual wage of $96,710 in May 2023.
+                            The
+                            BLS projects 9% job growth between 2021 and 2031.</p>
+                    </div>
+                    <div class="col-info">
+                        <h3>Computer Network Architect</h3>
+                        <hr>
+                        <p>These professionals build data communication networks, including wide area networks and
+                            intranets. These networks may be small-scale — such as a connection within an office — or as
+                            large scale as cloud computing. The BLS found that computer network architects earned a
+                            median
+                            annual salary of $120,520 in May 2023. This career is projected to grow 4% between 2021 and
+                            2031.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="languages">
+            <div class="most">
+                <h3>What Are the Most Popular Coding Languages?</h3>
+            </div>
+            <table border="1" style="border-collapse: collapse; ">
+                <thead>
+                    <tr>
+                        <th>Java</th>
+                        <td> General-purpose and Used for Web applications</td>
+                    </tr>
+
+                    <tr>
+                        <th>Python</th>
+                        <td>Used for building websites and software programs and performing data analysis</td>
+                    </tr>
+
+                    <tr>
+                        <th>HTML</th>
+                        <td>Used for creating the structures of a webpage, like paragraphs, links, and tables .</td>
+                    </tr>
+
+                    <tr>
+                        <th>CSS</th>
+                        <td>CSS is the language we use to style an HTML document.t</td>
+                    </tr>
+
+                    <tr>
+                        <th>JavaScript</th>
+                        <td>Used for creating webpages and supporting front-end and back-end development</td>
+                    </tr>
+
+                    <tr>
+                        <th>C</th>
+                        <td>Used for developing software operating systems and databases
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>C++</th>
+                        <td>Used for creating and developing games
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Ruby</th>
+                        <td>Full-stack web development</td>
+                    </tr>
+
+                    <tr>
+                        <th>SQL</th>
+                        <td>Used for communicating with databases and managing and organizing data</td>
+                    </tr>
+
+                    <tr>
+                        <th>Mongodb</th>
+                        <td>Used for communicating with databases and managing and organizing data</td>
+                    </tr>
+
+                    <tr>
+                        <th>PHP</th>
+                        <td>Used for managing databases and creating dynamic webpages</td>
+                    </tr>
+
+                </thead>
+            </table>
+            <!-- <div class="lang">
+                    <ul>
+                        <li>Java</li>
+                        <ul>
+                            <li>General-purpose and Used for Web applications</li>
+                        </ul>
+                        <li>Python</li>
+                        <ul>
+                            <li>General-purpose and back-end development</li>
+                        </ul>
+                        <li>JavaScript</li>
+                        <ul>
+                            <li>General-purpose and front-end and back-end development</li>
+                        </ul>
+                        <li>C/C++</li>
+                        <ul>
+                            <li>General-purpose; can be used as both a high-level and low-level coding language</li>
+                        </ul>
+                        <li>SQL</li>
+                        <ul>
+                            <li>Data management</li>
+                        </ul>
+                        <li>HTML</li>
+                        <ul>
+                            <li>HTML is the language in which most websites are written.<br> HTML is used to create pages and make them functional.</li>
+                        </ul>
+                        <li>CSS</li>
+                        <ul>
+                            <li>CSS is the language we use to style an HTML document.</li>
+                        </ul>
+                        <li>PHP</li>
+                        <ul>
+                            <li>General-purpose and back-end development</li>
+                        </ul>
+                        <li>Ruby</li>
+                        <ul>
+                            <li>Full-stack web development</li>
+                        </ul>
+                        <li>Mongodb</li>
+                        <ul>
+                            <li>Data management</li>
+                        </ul>
+                    </ul>
+                </div> -->
+        </div>
+    </div>
+    </div>
+
+    <div class="footer">
+        <p>Copyright@Karthick P M</p>
+    </div>
+
+
+
+    <!-- <div class="images">
+        <marquee direction="left">
+            <img src="images/How to Learn Programming Without All the Stress.jfif">
+            <img src="images/Visualmodo - WordPress Themes Plugins Templates That Works.jfif">
+        </marquee>
+    </div> -->
+
+
+
+    <script>
+
+        let menulist = document.getElementById("menulist1")
+
+        menulist.style.maxHeight = "0px";
+
+        function openmenu()
+        {
+            if (menulist.style.maxHeight == "0px") {
+            menulist.style.maxHeight = "300px";
+        }
+        else {
+            menulist.style.maxHeight = "0px";
+        }
+        }
+
+       
+    </script>
+</body>
+
+</html>

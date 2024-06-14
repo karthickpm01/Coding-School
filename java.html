@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to java Programming</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .header {
+            background-color: black;
+            color: white;
+            position: sticky;
+            top: 0;
+            scroll-behavior: smooth;
+        }
+
+        /* 
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            height: 120px;
+
+        } */
+
+        .col-1 img {
+            padding: 5px;
+        }
+
+        nav ul li a {
+            padding: 5px;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+
+        nav ul li a:hover {
+            color: red;
+        }
+
+        .home h1 {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 30px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+        }
+
+        .home-cols {
+            display: flex;
+            scroll-behavior: smooth;
+        }
+
+        .home-cols img {
+            padding: 10px;
+            margin: 10px;
+            margin-top: 55px;
+            border-radius: 80%;
+        }
+
+        .home-info h3 {
+            font-size: 30px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .home-info {
+            width: 1200px;
+            height: 420px;
+            background-color: rgb(181, 181, 181);
+            margin-right: 10px;
+            border-radius: 20px
+        }
+
+        .home-info li {
+            font-size: 19px;
+            margin-left: 10px;
+            line-height: 25px;
+        }
+
+        .java {
+            padding: 50px;
+            scroll-behavior: smooth;
+        }
+
+        .java-info h3 {
+            font-size: 30px;
+            padding: 20px;
+        }
+
+        .java-info p {
+            font-size: 23px;
+            line-height: 30px;
+        }
+
+        .java-info li {
+            font-size: 23px;
+            line-height: 40px;
+        }
+
+        pre {
+            background-color: black;
+            color: white;
+            padding: 30px;
+        }
+
+        .java-uses {
+            padding: 50px;
+            line-height: 30px;
+            scroll-behavior: smooth;
+        }
+
+        .java-uses h3 {
+            font-size: 30px;
+            padding: 20px;
+        }
+
+        .java-uses li {
+            font-size: 25px;
+        }
+
+        .java-uses p {
+            font-size: 22px;
+        }
+
+        .user p {
+            font-size: 20px;
+        }
+
+        .footer {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding: 15px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .sample-programs h3 {
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 20px
+        }
+
+        .sample-programs {
+            padding: 50px;
+            line-height: 20px;
+        }
+
+        summary {
+            font-size: 25px;
+            line-height: 40px;
+        }
+
+        * {
+            padding: 0%;
+            margin: 0;
+        }
+
+        nav {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            color: white;
+            position: sticky;
+            top: 0;
+            height: 70px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 35px;
+            list-style-type: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+        }
+        .menu-bar {
+            font-size: 25px;
+            display: none;
+            cursor: pointer;
+        }
+        @media (max-width:600px) {
+            nav ul {
+                position: absolute;
+                flex-direction: column;
+                align-items: center;
+                top: 90px;
+                left: 0;
+                right: 0;
+                background-color: black;
+                display: flex;
+                overflow: hidden;
+                gap: 0;
+                transition: all 0.7s;
+            }
+
+            nav ul li {
+                padding: 10px;
+            }
+
+            .menu-bar {
+                display: block;
+            }
+
+            .home h1 {
+                margin-top: 30px;
+            }
+
+            .home-cols {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .col-1 img {
+                margin-top: 10px;
+                width: 80px;
+                height: 60px;
+            }
+            .home-img img{
+                margin-left: 55px;
+                margin-top: 0px;
+            }
+            .home-info {
+                padding: 10px;
+                margin: 10px;
+                width: 290px;
+                height: 1350px;
+                margin-left: 20px;
+            }
+
+            .home-info h3 {
+                padding: 10px;
+            }
+
+            .java-info {
+                padding: 0;
+            }
+
+            .java-info h3 {
+                padding: 10px;
+                font-size: 30px;
+            }
+
+            .java-info p {
+                padding: 0;
+                font-size: 18px;
+                margin: 0;
+            }
+
+            .java-info li {
+                font-size: 18px;
+            }
+
+            .java {
+                padding: 15px;
+            }
+
+            .java-info pre {
+                width: 280px;
+                height: 390px;
+                font-size: 12px;
+                padding: 8px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                margin-left: 20px;
+            }
+
+            .java-info {
+                line-height: 20px;
+            }
+
+            .java-info li {
+                font-size: 20px;
+            }
+
+            .user h3 {
+                font-size: 25px;
+                padding: 0%;
+                margin: 0%;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin-bottom:20px ;
+            }
+
+            .user {
+                padding: 0;
+                margin: -20px;
+                width: 250px;
+                line-height: 30px;
+            }
+
+            .user li {
+                padding: 0;
+                margin: 0;
+                font-size: 20px;
+            }
+            nav
+            {
+                height: 50px;
+            }
+            .sample-programs {
+                padding: 10px;
+                margin-bottom: 20px;
+                /* margin-top: 50px; */
+            }
+
+            .sample-programs h3 {
+                padding: 0;
+                margin-bottom: 20px;
+            }
+
+            .sample-programs summary {
+                font-size: 20px;
+            }
+
+            .sample-programs pre {
+                font-size: 10px;
+            }
+            .footer p{
+                font-size: 18px;
+                padding: 10px;
+             }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header" id="header">
+        <nav>
+            <div class="col-1">
+                <img src="https://upload.wikimedia.org/wikipedia/zh/thumb/8/88/Java_logo.png/220px-Java_logo.png"
+                    height="90px" width="150px">
+            </div>
+            <ul id="menulist1">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#java">What is java?</a></li>
+                <li> <a href="#java-uses">Java Uses</a></li>
+                <li><a href="#sample-programs">Sample Programs</a></li>
+            </ul>
+            <div class="menu-bar">
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </div>
+        </nav>
+    </div>
+    <!-- <div class="container" id="container">
+        <div class="header">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/zh/thumb/8/88/Java_logo.png/220px-Java_logo.png"
+                        height="90px" width="150px">
+                </div>
+                <div class="navlist">
+                    <a href="#container">Home</a>
+                    <a href="#java">What is java</a>
+                    <a href="#works">How does it works</a>
+                    <a href="#java-uses">Java Uses</a>
+                    <a href="#sample-programs">Sample Programs</a>
+                </div>
+            </div>
+        </div> -->
+
+    <div class="home" id="home">
+        <h1>Welcome to Java Programming</h1>
+        <div class="home-cols">
+            <div class="home-img">
+                <img src="images/java.jfif">
+            </div>
+            <div class="home-info">
+                <h3>History of Java</h3>
+                <li><a href="#"> James Gosling</a>,Mike Sheridan, and Patrick Naughton initiated the Java language
+                    project in June 1991. <br>
+                    The small team of sun engineers called Green Team.</li>
+                <li>Initially it was designed for small, embedded systems in electronic appliances like set-top
+                    boxes.
+                </li>
+                <li>Firstly, it was called "Greentalk" by James Gosling, and the file extension was .gt.</li>
+                <li>After that, it was called Oak and was developed as a part of the Green project.</li>
+                <li>Why Oak? Oak is a symbol of strength and chosen as a national tree of many countries like the
+                    U.S.A., France, Germany, Romania, etc.</li>
+                <li>In 1995, Oak was renamed as "Java" because it was already a trademark by Oak Technologies.</li>
+                <li>Initially developed by James Gosling at Sun Microsystems (which is now a subsidiary of Oracle
+                    Corporation) and released in 1995.</li>
+                <li>In 1995, Time magazine called Java one of the Ten Best Products of 1995.</li>
+                <li>JDK 1.0 was released on January 23, 1996. After the first release of Java, there have been many
+                    additional features added to the language. Now Java is being used in Windows applications, Web
+                    applications, enterprise applications, mobile applications, cards, etc. Each new version adds
+                    new
+                    features in Java.</li>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+    <div class="java" id="java">
+        <div class="java-info">
+            <h3>What is java?</h3>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Java is a class-based, object-oriented programming language that is
+                designed to have as few
+                implementation dependencies as possible. It is intended to let application developers write once, and
+                run anywhere (WORA), meaning that compiled Java code can run on all platforms that support Java without
+                the need for recompilation.</p>
+            <li>Java was first released in 1995 and is widely used for developing applications for desktop, web, and
+                mobile devices</li>
+            <li>Java is known for its simplicity, robustness, and security features, making it a popular choice for
+                enterprise-level applications.</li>
+            <li>Java applications are compiled to byte code that can run on any Java Virtual Machine. </li>
+            <li>It is a simple programming language</li>
+            <li>Java makes writing, compiling, and debugging programming easy.</li>
+            <li>t helps to create reusable code and modular programs. </li>
+            <li>A general-purpose programming language made for developers to write once run anywhere that is compiled
+                Java code can run on all platforms that support Java.</li>
+            <li>he principles for creating java were simple, robust, secured, high-performance, portable,
+                multi-threaded, interpreted, dynamic, etc.</li>
+            <li id="works">Implementation of a Java application program involves a following step. They include:<br>
+                &nbsp;&nbsp; 1. Creating the program<br>
+                &nbsp;&nbsp; 2. Compiling the program<br>
+                &nbsp;&nbsp; 3. Running the program</li><br>
+            <h3>Creating Program</h3>
+            <pre>
+We can create a program using Text Editor
+
+(Notepad) or IDE (NetBeans) or VS Studio
+
+class Test
+
+{
+
+  public static void main(String []args)
+
+  {
+
+    System.out.println(“Hello world.”);
+
+  }
+
+};
+ 
+File -> Save -> d:\Test.java
+    </pre>
+            <li>Compiling the program</li>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To compile the program, we must run the Java compiler (javac), with the
+                name of the source file on “command prompt” like as follows<br>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If everything is OK, the “javac” compiler creates a file called
+                “Test.class” containing byte code of the program.</p>
+            <li> Running the program</li>
+            <p>
+                &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We need to use the Java Interpreter to run a program.
+            </p>
+        </div>
+    </div>
+    <div class="java-uses" id="java-uses">
+        <div class="user">
+            <h3>What is Java programming language used for?</h3>
+            <p>Java is a free-to-use and a versatile language, it builds localized and distributed software. Some
+                common uses of Java include:</p><br>
+            <li><b>Game Development</b></li>
+            <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Many popular mobile, computer, and video games are built in Java. Even
+                modern games that integrate advanced
+                technology like machine learning &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or virtual reality are built with Java
+                technology.</p><br>
+            <li><b>Cloud computing</b></li>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Java is often referred to as WORA – Write Once and Run Anywhere, making it
+                perfect for decentralized cloud-based
+                applications. Cloud providers &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; choose Java language to
+                run programs on a wide range of underlying platforms.</p><br>
+            <li><b>Big Data</b></li>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Java is used for data processing engines that can work with complex data
+                sets and massive amounts of real-time
+                data.</p><br>
+            <li><b>Artificial Intelligence</b></li>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Java is a powerhouse of machine learning libraries. Its stability and speed
+                make it perfect for artificial
+                intelligence application development like &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;natural language processing and
+                deep learning.</p><br>
+            <li><b>Internet of Things</b></li>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Java has been used to program sensors and hardware in edge devices that can
+                connect independently to the
+                internet.</p><br>
+            <li><b>Web Development</b></li>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Web development with Java allows us to create dynamic web pages where
+                users can interact with the interface.</p>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--     
+        Why is Java such a popular choice among modern-day software developers?
+        Java is popular because it has been designed for ease of use. Some reasons developers continue to choose Java
+        over other programming languages include:
+
+        High quality learning resources
+        Java has been around for a long time, so many learning resources are available for new programmers. Detailed
+        documentation, comprehensive books, and courses support developers through the learning curve. In addition,
+        beginners can start writing code in Core Java before moving to Advanced Java.
+
+        Inbuilt functions and libraries
+        When using Java, developers don’t need to write every new function from scratch. Instead, Java provides a rich
+        ecosystem of in-built functions and libraries to develop a range of applications.
+
+        Active community support
+        Java has many active users and a community that can support developers when they face coding challenges. The
+        Java platform software is also maintained and updated regularly.
+
+        High-quality development tools
+        Java offers various tools to support automated editing, debugging, testing, deployment, and change management.
+        These tools make Java programming time and cost-efficient.
+
+        Platform Independent
+        Java code can run on any underlying platform like Windows, Linux, iOS, or Android without rewriting. This makes
+        it especially powerful in today’s environment, where we want to run applications on multiple devices.
+
+        Security
+        Users can download untrusted Java code over a network and run it in a secure environment in which it cannot do
+        any harm. Untrusted code cannot infect the host system with a virus nor can it read or write files from the hard
+        drive. The security levels and restrictions in Java are also highly configurable.-->
+    </div>
+    </div>
+
+
+    <div class="sample-programs" id="sample-programs">
+        <h3>Sample Programs</h3>
+        <div class="programs">
+            <details>
+                <summary>Write a program to print hello world</summary>
+                <pre id="prgm1">
+We can create a program using Text Editor 
+
+(Notepad)or IDE (NetBeans) or VS Studio
+class Test
+{
+  public static void main(String []args)
+  {
+    System.out.println(“Hello world.”);
+  }
+};
+     
+File -> Save -> d:\Test.java
+                </pre>
+            </details>
+            <details>
+                <summary>Write a java program for addition of two numbers</summary>
+                <pre>
+import java.util.Scanner;
+class Add
+{
+  public static void main(String []args)
+  {
+    System.out.println("Enter Two Numbers");
+    Scanner sc=new Scanner(System.in);
+    System.out.println(“Enter Number 1”);
+    int val1=sc.nextInt();
+    System.out.println("Enter Number One");
+    int val2=sc.nextInt();
+    int result=val1+val2;
+    System.out.println("The addition of 
+        two numbers is:"+result);
+  }
+};
+     
+File -> Save -> d:\Add.java
+                </pre>
+            </details>
+            <details>
+                <summary>Check Whether given number is positive or negative</summary>
+<pre>
+import java.util.Scanner;
+class positive
+{
+public static void main(String []args)
+    {
+      System.out.println("Enter Number");
+      Scanner sc=new Scanner(System.in);
+      int val1=sc.nextInt();
+      if(val1==0)
+      {
+        System.out.println("Value is Zero");
+      }
+      else if(val1 >= 1)
+      {
+         System.out.println("positive number");
+      }
+      else if(val1 < 0)
+      {
+        System.out.println("Negative number");
+      }
+      else
+      {
+        System.out.println("Invalid input");
+      }
+    }
+};
+
+File -> Save -> d:\positive.java
+</pre>
+            </details>
+            <details>
+                <summary>Write a program to check Whether given number is even or odd</summary>
+<pre>
+import java.util.Scanner;
+class EvenOdd
+{
+  public static void main(String []args)
+  {
+    System.out.println("Enter Number");
+    Scanner sc=new Scanner(System.in);
+    int val1=sc.nextInt();
+    if(val1%2==0)
+    {
+      System.out.println("Even Number");
+    }
+    else
+    {
+      System.out.println("Odd Number");
+    }
+  }
+}
+
+File -> Save -> d:\EvenOdd.java
+</pre>
+            </details>
+            <details>
+                <summary>Write a program to check whether given year leap year or not</summary>
+<pre>
+import java.util.Scanner;
+class Leapyear
+{
+  public static void main(String []args)
+  {
+    System.out.println("Enter Year");
+    Scanner sc=new Scanner(System.in);
+    int year=sc.nextInt();
+    if(year%4==0 && year%100!=0 | year%400==0)
+    {
+      System.out.println("leap Year");
+    }
+    else
+    {
+      System.out.println("Not a leap Year");
+    }
+  }
+}
+
+File -> Save -> d:\Leapyear.java
+</pre>
+            </details>
+            <details>
+                <summary>Write a program to swap two numbers</summary>
+<pre>
+java.util.Scanner;
+class Swapping
+{
+  public static void main(String []args)
+  {
+    System.out.println("Enter first number");
+    Scanner sc=new Scanner(System.in);
+    int a=sc.nextInt();
+    System.out.println("Enter Second  number");
+    int b=sc.nextInt();
+
+    int temp=a;
+    a=b;
+    b=temp;
+
+    System.out.println("After Swapping of two 
+
+    numbers A and B is " +a "and " +b);
+
+
+ }
+}
+File -> Save -> d:\Swapping.java
+</pre>
+            </details>
+            <details>
+                <summary>Java Program for factorial of a number</summary>
+<pre>
+class fact
+{ 
+  static int factorial(int n) 
+  { 
+    int res = 1, i; 
+    for (i = 2; i <= n; i++) 
+    res *= i; 
+    return res; 
+  } 
+                    
+  public static void main(String[] args) 
+  { 
+    int num = 5; 
+    System.out.println("Factorial of 
+
+    " + num + " is "+ factorial(5)); 
+  } 
+}
+File -> Save -> d:\fact.java
+</pre>
+            </details>
+            <details>
+                <summary>Java Program to Find the Biggest of 3 Numbers</summary>
+<pre>
+// Java Program to Find the Biggest of 
+3 Numbers
+import java.io.*;
+
+class greatest {
+static int biggestOfThree(int x, int y, int z)
+{
+  // Comparing all 3 numbers
+      if (x >= y && x >= z)
+
+    // Returning 1st number if largest
+        return x;
+
+      // Comparing 2nd no with 1st
+       and 3rd no
+        else if (y >= x && y >= z)
+
+      // Return z if the above c
+      onditions are false
+        return y;
+
+      else
+
+        // Returning 3rd no, Its sure 
+        it is greatest
+        return z;
+    }
+    public static void main(String[] args)
+    {
+      int a, b, c, largest;
+
+      // Considering random integers 
+      three numbers
+      a = 5;
+      b = 10;
+      c = 3;
+      // Calling the function in main() body
+      largest = biggestOfThree(a, b, c);
+
+      // Printing the largest number
+      System.out.println(largest + " 
+      
+      is the largest number.");
+    }
+}
+File -> Save -> d:\greatest.java
+</pre>
+
+            </details>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Copyright@Karthick P M</p>
+    </div>
+
+
+    <script>
+
+        let menulist = document.getElementById("menulist1")
+
+        menulist.style.maxHeight = "0px";
+
+        function openmenu() {
+            if (menulist.style.maxHeight == "0px") {
+                menulist.style.maxHeight = "300px";
+            }
+            else {
+                menulist.style.maxHeight = "0px";
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

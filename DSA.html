@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data structures</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            padding: 0%;
+            margin: 0;
+        }
+
+        nav {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            color: white;
+            position: sticky;
+            top: 0;
+            height: 70px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 35px;
+            list-style-type: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+        }
+
+        .menu-bar {
+            font-size: 25px;
+            display: none;
+            cursor: pointer;
+        }
+
+        /* body {
+            background-color: rgb(203, 199, 203);
+        } */
+
+        .col-1 img {
+            padding: 5px;
+        }
+
+        nav ul li a {
+            padding: 5px;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+
+        nav ul li a:hover {
+            color: red;
+        }
+
+        .home h1 {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 40px;
+            padding: 20px;
+
+        }
+
+        .home-cols img {
+            padding: 10px;
+            margin-left: 35%;
+        }
+
+        .home-info {
+            padding: 50px;
+        }
+
+        .home-info h3 {
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .home-info p {
+            padding-left: 20px;
+            font-size: 22px;
+            line-height: 30px;
+        }
+
+        .classifications {
+            padding-left: 50px;
+        }
+
+        .classifications h2 {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .classifications img {
+            align-items: center;
+            margin-left: 25%;
+            margin-bottom: 20px;
+        }
+
+        .cls-info {
+            font-size: 25px;
+            line-height: 30px;
+        }
+
+        .arrays {
+            padding: 50px;
+        }
+
+        .arrays h3 {
+            font-size: 40px;
+        }
+
+        .array-info p {
+            font-size: 25px;
+            line-height: 30px;
+            margin-top: 20px;
+        }
+
+        .array-img img {
+            margin-left: 300px;
+            padding: 20px;
+        }
+
+        .operations li,
+        .stack-operations li,
+        .queue-operations li {
+            font-size: 25px;
+            line-height: 30px;
+            margin-top: 20px;
+        }
+
+        .stacks,
+        .queue {
+            padding: 50px;
+        }
+
+        .stacks h3,
+        .queue h3 {
+            font-size: 40px;
+        }
+
+        .stack-info p,
+        .queue-info p {
+            font-size: 25px;
+            line-height: 30px;
+            margin-top: 20px;
+        }
+
+        .stack-img img,
+        .queue-img img {
+            margin-left: 300px;
+            margin-top: 20px;
+        }
+        .queue a{
+            margin-left: 500px;
+            background-color: black;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 30px;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+        #queue-opr {
+            margin-bottom: 30px;
+        }
+        .footer {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            font-size: 15px;
+        }
+        @media (max-width:600px) {
+            nav ul {
+                position: absolute;
+                flex-direction: column;
+                align-items: center;
+                top: 90px;
+                left: 0;
+                right: 0;
+                background-color: black;
+                display: flex;
+                overflow: hidden;
+                gap: 0;
+                transition: all 0.7s;
+            }
+
+            nav ul li {
+                padding: 10px;
+            }
+
+            .menu-bar {
+                display: block;
+            }
+            .home h1{
+                font-size: 25px;
+            }
+            .home-img img
+            {
+                padding: 0;
+                margin: 0;
+                width: 200px;
+                height: 150px;
+                margin-left: 80px;
+            }
+            .home-info
+            {
+                padding: 10px;
+            }
+            .home-info h3{
+                font-size: 25px;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            .home-info p{
+                font-size: 20px;
+            }
+            .classifications
+            {
+                padding: 10px;
+            }
+            .classifications h2{
+                font-size: 25px;
+            }
+            .classifications img  {
+                width: 250px;
+                height: 250px;
+                margin: 0;
+                margin-left: 40px;
+                margin-bottom: 20px;
+            }
+            .array-img img 
+            {
+                margin-left: 30px;
+                width: 200px;
+                height: 200px;
+                margin-bottom: 20px;
+                margin-top: 20px;
+            }
+            .stack-img img
+            {
+                margin: 0;
+                margin-left: 30px;
+                width: 200px;
+                height: 200px;
+                margin-bottom: 20px;
+                margin-top: 20px;
+            }
+            .queue-img img
+            {
+                width: 280px;
+                height: 200px;
+                margin: 0px;
+                margin-bottom: 20px;
+            }
+            .cls-info
+            {
+                padding: 20px;
+            }
+            .cls-info li
+            {
+                font-size: 20px;
+            }
+            .stacks,.queue,.arrays
+            {
+                padding: 20px;
+            }
+            .stacks h3, .queue h3,.arrays h3{
+                font-size: 25px;
+                justify-content: center;
+            align-items: center;
+            text-align: center;
+            }
+            .arrays p , .stack-info p,.queue-info p{
+                font-size: 20px;
+            }
+            .stack-operations li, .operations li,.queue-operations li
+            {
+                font-size: 20px;
+            }
+            .operations h3 , .stack-operations h3, .queue-operations h3
+            {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            }
+            .queue a
+            {
+                font-size: 20px;
+                margin-left: 70px;
+            }
+            .col-1 img{
+                width: 90px;
+                height: 100px;
+             }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header" id="header">
+        <nav>
+            <div class="col-1" id="col-1">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAclBMVEUAAAD///9aWlo+Pj78/Pzu7u74+PhJSUnx8fGioqLHx8dbW1sUFBTm5ub09PSxsbG/v7/a2totLS1SUlI1NTXY2NhERETPz893d3e7u7uTk5MNDQ1xcXFmZmaNjY0fHx8oKCiFhYWrq6siIiJ+fn6ampoprUiLAAAJ/UlEQVR4nO2c6ZqqMAyGrewIIpsI7tv93+JpC2pSlnEbYM6T98c5MwpMQ9vkS1qYTAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCwOyTJIn2Q7fid7Ac181Pu22sadpymRz23nroJn2Tjcuyozd0K36PYj4vbj+v9+fzef9fdd9kY+ulfcnWyVLf1nV97oeZ62ysw7At+xIByyL+3+EY6kzFDvPVcugGfsg6YwH/zzvNa+ZV6H6w+cvONWUn/u/GaLOvxPy7bihnLv/3WrcpXAROsSucYJHZ5SfZZejGvsOKGdxrOop181OMD7OKXHZybg3TzPdZ22wjzEQYq8ZjvUvOp6q/+1txpGAp12nYwKDj+KnDuzLQemvf5xiM99cCGXj84ZT4ZDN31kvrvkDM7PUkQQbunjht67Jw++uN+wontlD8qPvciYlj+5vfbdt3SMWYDGFwT54+d+X7f6AfGZtOPKhl8lfOnoXh6AUdM898LgJe7BUrdQ+/0rBvETGT6zWozV6+xDRzxqzmlmyOw73/xkW2ixGLOUu1cPHWZS6qxhsPiWphl5zpwNsVIx2qHjPXk+3nFvJ7VYw0coj4p+mfjlJJvBtlkmyK8GA/LAw/udhm+q1mfZFMyFCgaeYfXS3Zjq8bT0LEnIBoiz67Xjy6vGorIiAM+c257/NE2sicqsf05WQNXM3p40smIxupoUguss9EjcJ+XCY6LJtMjmCYfkGdrEc1UJfMjEQSdccZukVfRw7T/GGh8bcqaU9QiCi/xN505woWwW72U/A4TIt8IQ+dnn/6S6tMXPVLzX6BRBdTDwT9FBkcBu0TU7um4M7oadFdAfHlYc8Uur7MQohRGBK59nLBr8xvTv+Wbm2hSs87ihqrrznrV5kyFt1usIQ7Vw23vKmqdmJN6O2O6jZMPtUUbyAX15RODJSWqwWqKGQthC3RcHY/4NcNqsHzQw/NRN6Gg6k03Ec+J7FZK8ah8a88VMUA5fJUdBHMg4U7VRtuAk3tda41+k3xBoz7rDfD7vABlCDvIiputWFoPnrRVb/DNKXR8JQBFugy6V2w/o5rDTduh29rXynUCxpodeuDQsK7JLJRcJU0ri+aPlrW6mVupLW/gD3X8ysHX+MkwxSIGMLh1Q0pHX2ifmzaamRUx6GHv3673vUBplDcM9AI/usyUx1qOU7xkn96tKJDMj2hY6/K5ZVdAvoA2nclMmE0loRY8y6K05TbiqDTMO9Tbg9GQM1dqsFFvQM9kJSTB7SkUldYushOhFZD0Qp6UYnqR8VApvdjFUQrbyzMMSq/ggOjkKht5VUwAmycA9fDZ//6WwZkS+RSD6r1fNSLYvi1NXTm3Lmiiabs9BAYk76RFoqBCUo2N48IJ5iZoNH4XEGgKbr0rr9LUcXF2wGMqHnZE9DFis03wOKnUqFGgdC7/tbudxbaU0Vu2IkB9qXuE3U1OCwe9L2QU1moa9i1lEkTnJypInbMYPVDpcMCR+MstFdu0l8MO1CWKgNXBNvoIYcrb4tuZMH10qanwXakDA6QnhdV78mNqBTB6ousYID4IBY22nIne7Grl6MO4IAtPLVn/f1I34R7NFCrsMlaQwAHhOqeMRAlfXxqvxtVQILKey2CncZHk2bjdkHXU8PARR3wjRjy4Mr96m9Yepri5NDkNi0fJorptlQlOQY2HWhumUKflN8HsVDUK2Bhas6jvHU3UY6tWbeJoG5lKp9Cr9XrAgIqHxoenjDzCJhYZq/L7iz4rubgZco1cBBNP1tw/sRCGTNgELS5iVrpfuaH6oxdR7mNmTchAHxWpWKmTTeiZwtNX4oZGNht3nNn42Z8xaajIFUlgFBz3yrnoPftgSzUPUOGRWiieXOhWIpYRZA2PqURtlsDre5RfyMLJ2dbxmNkopAgWZXlq0Tx6prhWo1MEKHmfqT1YOT2uIiB+1DUtIXngybqIvTnrH3LzAGqvVKTQc0dJ1pJBBPO/vS3YqEIgKqJciIdu1YJXeVgVHLVG35qqjv+FqqFk6UhTYQetRqhiXVH0V1b5Vj8CEAzvenvmoUiOoi5eITNkWIl4MlEidQCANhnhVx7/Zne1oTrFk6i0qNCdVN6UjC7sN+BE+zYtsKo0pf+xr60wpAWxbAr5CIbmJ1QZV9gw+PJvlvZ3Xhp6/yXLGSGRMa50FMWC3Wx+rd5ND6blsWc9QwXK9ZNT8M1Yfa0iKG1NcDnDfCQCBUjMwGfmKnruqky57iPbH1eU6En/d1qIbNFuoT0mUzO1WVwhePk+KSBzO5nk1i7hWWoR4HRF95h1TXNjHVrqaNOo0zq08IyBVjBYWiKeH5IW0/genPT/qVKP/XvTgtlHLRQp0gPWLQdn+M6tz+tgQr9vTyu0W1hLQ7yGy9GqtZcsMmUOnmTBegOjMBCZoidGNj/y2ShKSTkyt1oNACV+vvQ350W2seiTOVmKK9PRSTT1HKGLsqJSHM3Z/Kw+/tYxGi3UE/FINvO5f7oMxqpumz7DjpVPT+Iz2AssZv30yIF1EPUVyv1ZXMNP79UG4V4jA+FYitQaM/EbIzuOYR/qlQmjJ8tEX3dtpT8S3izur+LNRSLA2aKkWoh76LL2WhVJ9zXRZePy83aAjo8ZiTbpjdV+oRzBn+MD8q8S+SXcmaK9coH2cH4dlw7lcbC3ai/Xfcc3RM2svtC4fhiHOvffah7lE/05VWAu+J8KXvLHQ6wc+gJtgZLRUaVKOvzizfqEXwKj8SNIry8CnIbRZZ27WNvZCY2f3y/gV9g61czr8BJor54bXNswKPPADsxn4IrblcUhw9qrp+9soub64X1CN1piZiF19sPiPDp5ZaCzSaHEb+ziHucuTTGUpN903lq/ZprYR4RRxkwbvCAEcpBOasVNLLLjz4yMkRFbjbiPuSc+SzMZBNnta1d5mLT+ayXqIrwVHL0DwNqPHMqHWhcfwzKzi5t8WMtBIPN79HnT+X+OpZ7s1FreGmf7gcN28G0q9TuvAt3AzwF9TrCRlfmUPtj0xYN3U5Pu+oVk+todjz5ZW+LdZ8BHoJ6CzFWqzdjWXmDjaWh1ZLcDZ+nxvlP7xUbD3ueTxlVEnVp3lCqIAzcDvAw4gfsxKvqSs+y3qkrNTXE4kfMet339QW2rtibeJA/e5dFx5YiqWpn+qijfTPRjqcb7i0QxjvXb1i/mWdyXXU3xNOk38ByfGa6963R2rZYpL5RDdq5nwYb+ZWV2n/mxYR1LIcHjfAKLDgnSyuOrWVUlZ6sBcvH9W6Jl4kuLg//qdP0cl4xlN3Rv8nuGaJjLooAaXBdVW+UXmsbZ2Ey//rH+w+RXJxF+HA3vuv8QQf6HN5+jDUngiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIghgD/wCLmnM0QLD11QAAAABJRU5ErkJggg=="
+                    height="110px" width="150px">
+            </div>
+            <ul id="menulist1">
+                <li><a href="#col-1">Home</a></li>
+                <li><a href="#home">What is DSA?</a></li>
+                <li> <a href="#classifications">Classification of DSA</a></li>
+                <li><a href="#stack">Stack</a></li>
+                <li><a href="#queue">Queue</a></li>
+
+            </ul>
+            <div class="menu-bar">
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </div>
+        </nav>
+    </div>
+
+    <div class="home" id="home">
+        <h1 id="welcome">Data Structures and Algorithms</h1>
+        <div class="home-cols">
+            <div class="home-img">
+                <img src="images/dsa1.png" width="300px" height="200px">
+            </div>
+            <div class="home-info">
+                <h3>What is Data Structures and Algorithms?</h3>
+                <p>Data structures and algorithms (DSA) are two important aspects of any programming language. Every
+                    programming language has its own data structures and different types of algorithms to handle these
+                    data
+                    structures.</p><br>
+                <p>1.&nbsp;Data Structures are used to organise and store data to use it in an effective way when
+                    performing
+                    data operations.</p><br>
+                <p>2.&nbsp;Algorithm is a step-by-step procedure, which defines a set of instructions to be executed in
+                    a
+                    certain order
+                    to get the desired output. Algorithms are generally created independent of underlying languages,
+                    i.e. an
+                    algorithm can be implemented in more than one programming language.</p><br>
+                <p>3.&nbsp;Almost every enterprise application uses various types of data structures in one or the other
+                    way.
+                    So, as a programmer, data structures and algorithms are really important aspects of day-to-day
+                    programming.</p>
+            </div>
+        </div>
+
+        <div class="classifications" id="classifications">
+            <h2>Classification of Data Structure:</h2>
+            <div class="cls-img">
+                <img
+                    src="https://media.geeksforgeeks.org/wp-content/uploads/20220520182504/ClassificationofDataStructure-660x347.jpg">
+            </div>
+            <div class="cls-info">
+                <li><b>Linear Data Structure: </b>Data structure in which data elements are arranged sequentially or
+                    linearly, where each element is attached to its previous and next adjacent elements, is called a
+                    linear data structure.<br>
+                    Example: Array, Stack, Queue, Linked List, etc.</li><br>
+                <li><b>Static Data Structure:</b> Static data structure has a fixed memory size. It is easier to access
+                    the elements in a static data structure.<br>
+                    Example: array.</li><br>
+                <li><b>Dynamic Data Structure:</b> In dynamic data structure, the size is not fixed. It can be randomly
+                    updated during the runtime which may be considered efficient concerning the memory (space)
+                    complexity of the code<br>.
+                    Example: Queue, Stack, etc.</li><br>
+                <li><b>Non-Linear Data Structure:</b> Data structures where data elements are not placed sequentially or
+                    linearly are called non-linear data structures. In a non-linear data structure, we can’t traverse
+                    all the elements in a single run only.<br>
+                    Examples: Trees and Graphs.</li>
+            </div>
+        </div>
+        <div class="arrays" id="arrays">
+            <h3>Arrays</h3>
+            <div class="array-info">
+                <p><b>An array</b> is a linear data structure and it is a collection of items stored at contiguous
+                    memory
+                    locations. The idea is to store multiple items of the same type together in one place. It allows the
+                    processing of a large amount of data in a relatively short period. The first element of the array is
+                    indexed by a subscript of 0. There are different operations possible in an array, like Searching,
+                    Sorting, Inserting, Traversing, Reversing, and Deleting.</p>
+            </div>
+            <div class="array-img">
+                <img src="https://static.javatpoint.com/ds/images/ds-array2.png">
+            </div>
+            <div class="operations">
+                <h3>Operations performed on array:</h3>
+                <li><b>Initialization:</b> An array can be initialized with values at the time of declaration or later
+                    using an assignment statement</li>
+                <li><b>Accessing elements:</b> Elements in an array can be accessed by their index, which starts from 0
+                    and goes up to the size of &nbsp;&nbsp;&nbsp;&nbsp; the array minus one.</li>
+                <li><b>Searching for elements:</b> Arrays can be searched for a specific element using linear search or
+                    binary
+                    search algorithms.</li>
+                <li><b>Sorting elements:</b>Elements in an array can be sorted in ascending or descending order using
+                    algorithms like bubble sort, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;insertion sort, or quick sort.</li>
+                <li><b>Inserting elements: </b>Elements can be inserted into an array at a specific location, but this
+                    operation can be time-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;consuming because it requires shifting existing
+                    elements in the array.</li>
+                <li><b>Deleting elements:</b>Elements can be deleted from an array by shifting the elements that come
+                    after it
+                    to fill the gap.</li>
+                <li><b>Updating elements:</b> Elements in an array can be updated or modified by assigning a new value
+                    to a
+                    specific index.</li>
+                <li><b> elements: </b>TraversingThe elements in an array can be traversed in order, visiting each
+                    element once.
+                </li>
+            </div>
+        </div>
+
+        <div class="stacks" id="stack">
+            <h3>Stack </h3>
+            <div class="stack-info">
+                <p>Stack is a linear data structure that follows a particular order in which the operations are
+                    performed. The order is LIFO(Last in first out). Entering and retrieving data is possible from only
+                    one end. The entering and retrieving of data is also called push and pop operation in a stack. There
+                    are different operations possible in a stack like reversing a stack using recursion, Sorting,
+                    Deleting the middle element of a stack, etc. </p>
+            </div>
+            <div class="stack-img">
+                <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20221219100314/stack.drawio2.png">
+            </div>
+            <div class="stack-operations">
+                <h3>Operation performed on stack</h3>
+                <li><b>Push: </b>Elements can be pushed onto the top of the stack, adding a new element to the top of
+                    the stack.</li>
+                <li><b>Pop: </b>The top element can be removed from the stack by performing a pop operation, effectively
+                    removing the last element that was pushed onto the stack.</li>
+                <li><b>Peek: </b>The top element can be inspected without removing it from the stack using a peek
+                    operation.</li>
+                <li><b>IsEmpty:</b> A check can be made to determine if the stack is empty.</li>
+                <li><b>Size:</b> The number of elements in the stack can be determined using a size operation.</li>
+            </div>
+        </div>
+        <div class="queue" id="queue">
+            <h3>Queue</h3>
+            <div class="queue-info">
+                <p>Queue is a linear data structure that follows a particular order in which the operations are
+                    performed. The order is First In First Out(FIFO) i.e. the data item stored first will be accessed
+                    first. In this, entering and retrieving data is not done from only one end. An example of a queue is
+                    any queue of consumers for a resource where the consumer that came first is served first. Different
+                    operations are performed on a Queue like Reversing a Queue (with or without using recursion),
+                    Reversing the first K elements of a Queue, etc. A few basic operations performed In Queue are
+                    enqueue, dequeue, front, rear, etc.</p>
+            </div>
+            <div class="queue-img">
+                <img
+                    src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20221213111946/fifo-property-in-Queue.png">
+            </div>
+            <div class="queue-operations" id="queue-opr">
+                <h3>Operation performed on queue:</h3>
+                <li><b>Enqueue:</b> Elements can be added to the back of the queue, adding a new element to the end of
+                    the queue.</li>
+                <li><b>Dequeue:</b> The front element can be removed from the queue by performing a dequeue operation,
+                    effectively removing &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; the first element that was added to the
+                    queue.</li>
+                <li><b>Peek:</b> The front element can be inspected without removing it from the queue using a peek
+                    operation.</li>
+                <li><b>IsEmpty:</b> A check can be made to determine if the queue is empty.</li>
+                <li><b>Size:</b> The number of elements in the stack can be determined using a size operation.</li>
+            </div>
+            <a
+                href="https://www.geeksforgeeks.org/what-is-data-structure-types-classifications-and-applications/?_gl=1*i7kvmb*_ga*T1J1b0dYTl9qNkFfdmRQSk9QVzdyNDFQVkZYc002NjYtSEo4OTFjMkdfdzdDSHg4UlZmRDc0UTVpMVlSeC1ZSQ..*_ga_E752F18V9F*MTcxODIzOTcxOC4xLjAuMTcxODIzOTcxOS4wLjAuMA..">To
+                know more</a>
+        </div>
+        <div class="footer">
+            <p>Copyright@Karthick P M</p>
+        </div>
+        <script>
+
+            let menulist = document.getElementById("menulist1")
+
+            menulist.style.maxHeight = "0px";
+
+            function openmenu() {
+                if (menulist.style.maxHeight == "0px") {
+                    menulist.style.maxHeight = "300px";
+                }
+                else {
+                    menulist.style.maxHeight = "0px";
+                }
+            }
+
+
+        </script>
+</body>
+
+</html>

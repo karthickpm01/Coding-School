@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Python Programming</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+        .header {
+            background-color: black;
+            color: white;
+            position: sticky;
+            top: 0;
+            scroll-behavior: smooth;
+        }
+
+        /* .navbar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            height: 120px;
+           
+
+        } */
+
+        /* .logo {
+            padding: 15px;
+        } */
+
+        /* .navlist {
+            padding: 45px;
+            scroll-behavior: smooth;
+        } */
+
+        /* .navlist a {
+            padding: 5px;
+            margin: 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+
+        .navlist a:hover {
+            color: red;
+        } */
+
+        .home h1 {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 30px;
+
+        }
+
+        .home h1 {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 30px;
+            padding: 20px;
+
+        }
+
+        .home-cols {
+            display: flex;
+            scroll-behavior: smooth;
+        }
+
+        .home-cols img {
+            padding: 10px;
+            margin: 10px;
+            margin-top: 55px;
+            border-radius: 80%;
+        }
+
+        .home-info h3 {
+            font-size: 30px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .home-info {
+            width: 1200px;
+            height: 420px;
+            background-color: rgb(181, 181, 181);
+            margin-right: 10px;
+            border-radius: 20px
+        }
+
+        .home-info li {
+            font-size: 19px;
+            margin-left: 10px;
+            line-height: 25px;
+        }
+
+        .python {
+            padding: 50px;
+            scroll-behavior: smooth;
+        }
+        html{
+    scroll-behavior: smooth;
+}
+        .py-info h3 {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .py-info p {
+            font-size: 20px;
+            line-height: 25px;
+        }
+
+        .py-info li {
+            font-size: 20px;
+            line-height: 30px;
+        }
+
+        .uses h3 {
+            font-size: 30px;
+        }
+
+        .uses {
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .features
+        {
+            padding: 50px;
+        }
+        .uses-info h3{
+            font-size: 25px;
+            margin: 10px 0 10px 0;
+        }
+        .uses-info p{
+            font-size: 20px;
+            line-height: 30px;
+        }
+        .uses-info pre{
+            font-size: 16px;
+        }
+        .programs{
+            padding: 50px;
+        }
+        .programs h3{
+            font-size: 30px;
+            text-align: center;
+        }
+        summary
+        {
+            font-size: 25px;
+            line-height: 35px;
+        }
+        .programs pre{
+            font-size: 20px;
+        }
+        .footer {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding: 5px;
+        }
+        * {
+            padding: 0%;
+            margin: 0;
+        }
+
+        nav {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            color: white;
+            position: sticky;
+            top: 0;
+            height: 70px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 35px;
+            list-style-type: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+        }
+        .menu-bar {
+            font-size: 25px;
+            display: none;
+            cursor: pointer;
+        }
+        .col-1 img {
+            padding: 5px;
+        }
+
+        nav ul li a {
+            padding: 5px;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+
+        nav ul li a:hover {
+            color: red;
+        }
+        @media (max-width:600px) {
+            nav ul {
+                position: absolute;
+                flex-direction: column;
+                align-items: center;
+                top: 90px;
+                left: 0;
+                right: 0;
+                background-color: black;
+                display: flex;
+                overflow: hidden;
+                gap: 0;
+                transition: all 0.7s;
+            }
+
+            nav ul li {
+                padding: 10px;
+            }
+
+            .menu-bar {
+                display: block;
+            }
+            .home-cols {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .col-1 img {
+                margin-top: 10px;
+                width: 80px;
+                height: 60px;
+            }
+            .home-info {
+                padding: 10px;
+                margin: 10px;
+                width: 280px;
+                height: 1500px;
+            }
+            .home-img img{
+                margin-left: 55px;
+                margin-top: 20px;
+            }
+            .home-info h3 {
+                padding: 10px;
+            }
+            .py-info h3 {
+                padding: 10px;
+                font-size: 25px;
+            }
+            .py-info p {
+                padding: 0;
+                font-size: 18px;
+                margin: 0;
+            }
+            .py-info li {
+                font-size: 18px;
+            }
+            .python {
+                padding: 20px;
+            }
+            .uses h3{
+                font-size: 25px
+            }
+            .features
+            {
+                padding: 20px;
+            }
+            .uses img{
+                height: 200px;
+                width: 250px;
+            }
+            .uses-info h3{
+                font-size: 25px;
+                margin-bottom: 20px;
+                margin-top: 20px;
+            }
+            .uses-info p{
+                margin: 15px;
+                line-height: 30px;
+            }
+            .uses-info pre{
+                font-size: 15px;
+            }
+            .home-img img
+            {
+                margin-left: 40px;
+            }
+            .home-info 
+            {
+                margin-left: 30px;
+            }
+            .programs h3 {
+                padding: 0;
+                margin-bottom: 20px;
+            }
+            .programs summary {
+                font-size: 20px;
+            }
+            .programs pre {
+                font-size: 15px;
+            }
+            .footer p{
+                font-size: 18px;
+                padding: 10px;
+             }
+             .programs
+             {
+                padding: 15px;
+             }
+             .home h1{
+                margin-top: 20px;
+             }
+             
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header" id="header">
+        <nav>
+            <div class="col-1">
+                <img src="images/pylogo.png" height="90px" width="100px">
+            </div>
+            <ul id="menulist1">
+                <li><a href="#welcome">Home</a></li>
+                <li><a href="#python">What is Python?</a></li>
+                <li> <a href="#features">Features</a></li>
+                <li><a href="#programs">Sample Programs</a></li>
+            </ul>
+            <div class="menu-bar">
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </div>
+        </nav>
+    </div>
+    <!-- <div class="container" id="container">
+        <div class="header">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/pylogo.png" height="90px" width="100px">
+                </div>
+                <div class="navlist">
+                    <a href="#container">Home</a>
+                    <a href="#python">What is Python</a>
+                    <a href="#features">Features</a>
+                    <a href="#programs">Sample Programs</a>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="home" id="home">
+            <h1 id="welcome">Welcome to Python Programming</h1>
+            <div class="home-cols">
+                <div class="home-img">
+                    <img
+                        src="data:image/png;base64,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">
+                </div>
+                <div class="home-info">
+                    <h3>History of Python </h3>
+                    <li>Python is a widely used general-purpose, high-level programming language. It was initially
+                        designed by Guido van Rossum in 1991 and developed by Python Software Foundation. It was mainly
+                        developed for emphasis on code readability, and its syntax allows programmers to express
+                        concepts in fewer lines of code.
+
+                    </li>
+                    <li>Python consistently ranks as one of the most popular programming languages, and has gained
+                        widespread use in the machine learning community.
+                    </li>
+                    <li>In the late 1980s, history was about to be written. It was that time when working on Python
+                        started. Soon after that, Guido Van Rossum began doing its application-based work in December of
+                        1989 at Centrum Wiskunde & Informatica (CWI) which is situated in the Netherlands. It was
+                        started as a hobby project because he was looking for an interesting project to keep him
+                        occupied during Christmas.</li>
+                    <li>The programming language in which Python is said to have succeeded is ABC Programming Language,
+                        which had interfacing with the Amoeba Operating System and had the feature of exception
+                        handling. He had already helped create ABC earlier in his career and had seen some issues with
+                        ABC but liked most of the features. After that what he did was very clever. He had taken the
+                        syntax of ABC, and some of its good features. It came with a lot of complaints too, so he fixed
+                        those issues completely and created a good scripting language that had removed all the flaws.
+                    </li>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="python" id="python">
+        <div class="py-info">
+            <h3>What is Python?</h3>
+            <p>Python is an interpreted, object-oriented, high-level programming language with dynamic semantics.</p>
+            <li>Its high-level built in data structures, combined with dynamic typing and dynamic binding, make it very
+                attractive for Rapid Application Development, as well as for use as a scripting or glue language to
+                connect existing components together. </li>
+            <li>Python's simple, easy to learn syntax emphasizes readability and therefore reduces the cost of program
+                maintenance.</li>
+            <li>Python supports modules and packages, which encourages program modularity and code reuse. </li>
+            <li>The Python interpreter and the extensive standard library are available in source or binary form without
+                charge for all major platforms, and can be freely distributed.</li>
+            <li>Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc).</li>
+            <li>Python has a simple syntax similar to the English language.</li>
+            <li>Python has syntax that allows developers to write programs with fewer lines than some other programming
+                languages.</li>
+            <li>Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This
+                means that prototyping can be very quick.</li><br>
+<pre>
+Sample Code
+
+    Print("Hello world")
+</pre>
+        </div>
+    </div><hr>
+
+    <div class="features" id="features">
+        <div class="uses">
+            <h3>Key Features of Python Programming</h3><br>
+            <img src="images/py-feat.jpg" height="350px" width="420px">
+        </div>
+        <div class="uses-info">
+            <h3>1. Portable Language</h3>
+            <p>It is a cross-platform language. It can run on Linux, macOS, and Windows. For example, you can run the
+                Python code for Windows in Linux or macOS, too.</p>
+            <h3>2. Standard Library</h3>
+            <p>&nbsp;&nbsp;It offers various modules like operators, mathematical functions, libraries such as NumPy, Pandas,
+                Tensorflow, etc., and packages paving the way for the developers to save time to avoid re-writing the
+                codes from scratch. To provide more functionality and packages, they also provide Python Package Index.
+            </p>
+            <h3>3. High-Level Language</h3>
+            <p>&nbsp;&nbsp;It is a high-level, general-purpose programming language. Unlike machine language like C, C++, It is a
+                human-readable language. In other words, even a layman can understand the programs.</p>
+            <h3>4.Easy to learn and use</h3>
+            <p>
+It is easy to understand and 
+
+easy to code, and anyone can learn Python within
+
+a few days.For example, a simple Python program to add two numbers
+
+is as follows:<br><br>
+
+    a = 8<br>
+    b = 9<br>
+    print(a+b)<br><br>
+
+We have completed this program 
+
+within three lines. Whereas in 
+
+Java,C++ and C,it takes more lines.
+
+That is why Python is known as 
+
+an easy and precise language.
+            </p>
+            <h3>5. Dynamic Language</h3>
+<p>
+Declaring the type of a variable is not needed. For example, let us 
+
+declare an integer number 7 for a variable a.Rather than declare it as:<br><br>
+
+  int a = 7 ( this is necessary for statically-typed language like C)<br>
+
+    We declare it as<br>
+    a = 7
+<br>
+But, the programmers have to be
+
+careful regarding runtime errors.
+</p>
+            <h3>6. Extensible Language</h3>
+            <p>Code can be used to compile in C or C++ language so that it can be utilized for our Python code. This is
+                achieved because it converts the program to byte code.</p>
+            <h3>7. Interpreted Language</h3>
+            <p>Line-by-line execution of source code, converted into byte code; thus, compiling the code is not
+                necessary, making it easy to debug if required.</p>
+            <h3>8. Object-Oriented Programming Language</h3>
+            <p>It supports procedural, functional, structural, and also object-oriented language such as abstraction,
+                encapsulation, inheritance, and polymorphism which is considered important by the Python coder.</p>
+            <h3>9. Free and Open-source libraries</h3>
+            <p>It is a free open-source platform that can be downloaded easily from their Official Website.</p>
+            <h3>10. Support is provided for Graphical User Interface</h3>
+            <p>Lots of Graphical User Interface frameworks are available in Python, thus helping the software user, and
+                it sticks to platform-specific technologies. It can be used in software development, web development,
+                etc</p>
+        </div>
+    </div><hr>
+
+
+    <div class="programs" id="programs">
+        <h3>Sample Programs</h3>
+        <details>
+            <summary>Write a program to print hello world</summary>
+<pre>
+    print("hello world");
+</pre>
+        </details>
+
+        <details>
+            <summary>Write a program to print sum of two numbers</summary>
+<pre>
+n=int(input("enter first number"))
+
+n1=int(input("enter second number"))
+
+sum=n+n1
+
+print("The sum of two numbers is"
+    
+    ,sum)
+            </pre>
+        </details>
+
+        <details>
+            <summary>Check Whether given number is positive or negative</summary>
+            <pre>
+num=int(input("Enter Number"))
+
+if(num==0):
+
+    print("value is zero")
+
+elif(num>=1):
+
+    print("Positive Number")
+
+elif(num < 0):
+
+    print("Negative Number")
+
+else:
+
+    print("Invalid inputmode")
+</pre>
+        </details>
+
+        <details>
+            <summary>Write a program to check Whether given number is even or odd</summary>
+            <pre>
+Num=int(input("Enter Number"))
+
+if(Num%2==0):
+
+    print("Even Number")
+
+else:
+
+    print("Odd Number")
+            </pre>
+        </details>
+        <details>
+            <summary>Write a program to check whether given year leap year or not</summary>
+            <pre>
+Num=int(input("Enter Year"))
+
+if(year%4==0 and year%100!=0 
+
+or year%400==0):
+
+    print("Leap Year")
+
+else:
+
+    print("Not a leap Year")
+            </pre>
+        </details>
+        <details>
+            <summary>Write a program to swap two numbers</summary>
+            <pre>
+Val1=int(input("Enter A"))
+
+val2=int(input("Enter B"))
+
+temp=Val1
+
+val1=val2
+
+val2=temp
+
+print("Value of a and b is",
+
+val1,val2)
+            </pre>
+        </details>
+        <details>
+            <summary>Write a program check whether a is grearter or b</summary>
+            <pre>
+a = 200
+
+b = 33
+
+if b > a:
+
+    print("b is greater than a")
+
+elif a == b:
+
+    print("a and b are equal")
+
+else:
+
+    print("a is greater than b")
+                        </pre>
+        </details>
+    </div>
+    <div class="footer">
+        <p>Copyright@Karthick P M</p>
+    </div>
+
+
+    <script>
+
+        let menulist = document.getElementById("menulist1")
+
+        menulist.style.maxHeight = "0px";
+
+        function openmenu() {
+            if (menulist.style.maxHeight == "0px") {
+                menulist.style.maxHeight = "300px";
+            }
+            else {
+                menulist.style.maxHeight = "0px";
+            }
+        }
+
+
+    </script>
+</div>
+</body>
+
+</html>
